@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "06875cf4-e5cc-42de-a18b-dbe91ef9caa4",
+		"name": "mini-wallet-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24036875"
+	},
+	"item": [
+		{
+			"name": "user-report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/reports/users",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"reports",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/health",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cash-in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Idempotency-Key",
+						"value": "9e39ce2f-9600-42b2-8082-cce1061f9491",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userId\": \"68afe0a674d7ec7984fe1122\",\n\"amount\": 150000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/cash-in",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"cash-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Idempotency-Key",
+						"value": "31f15102-18e6-42e3-bcaf-953d10ba6ebd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"fromUserId\": \"68afe0a674d7ec7984fe1123\",\n\"toUserId\": \"68afe0a674d7ec7984fe1124\",\n\"amount\": 200000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/transfers",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction-reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/reports/transactions",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"reports",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8000/api/v1",
+			"type": "string"
+		}
+	]
+}
