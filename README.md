@@ -86,8 +86,8 @@ aya-wallet-system/
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/MinHeinKoKo/AYA-mini-wallet-system.git
-   cd AYA-mini-wallet-system
+   git clone https://github.com/MinHeinKoKo/aya-code-test.git
+   cd aya-code-test
    ```
 2. Install dependencies
    ```bash
