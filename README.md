@@ -109,3 +109,13 @@ aya-wallet-system/
    ```bash
    npm run start:dev
    ```
+7. Build Application
+   ```bash
+   npm run build
+   ```
+7. Run applicaiton
+   ```bash
+   npm run start
+   ```
+8. Once the server is running, open your browser and visit the API endpoint:  
+   [http://localhost:8000/api/v1](http://localhost:8000/api/v1)
