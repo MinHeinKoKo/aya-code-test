@@ -117,5 +117,5 @@ aya-wallet-system/
    ```bash
    npm run start
    ```
-8. Once the server is running, open your browser and visit the API endpoint:  
-   [http://localhost:8000/api/v1](http://localhost:8000/api/v1)
+8. Once the server is running, open your browser and visit the API endpoint for application health check:  
+   [http://localhost:8000/api/v1/health](http://localhost:8000/api/v1/health)
